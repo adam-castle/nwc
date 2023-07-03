@@ -32,6 +32,16 @@ export class LaketreeTabs extends LitElement {
 tabClicked(e)
 {
  debugger;
+
+//e.srcElement.innerText - set this to the value.
+  var tabs = this.shadowRoot.querySelectorAll('.tab');
+
+  for (const tab of tabs) {
+    tab.classList.remove('tab-selected');
+  }
+
+  e.srcElement.classList.add("tab-selected")
+
 }
 
 
